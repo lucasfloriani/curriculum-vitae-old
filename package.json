@@ -1,0 +1,56 @@
+{
+  "name": "curriculum-vitae",
+  "author": "Lucas Floriani <lucas.floriane@gmail.com> (https://github.com/lucasfloriani)",
+  "homepage": "https://github.com/lucasfloriani/curriculum-vitae#readme",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "This is a repository with the presentation of my curriculum using interactivity with javascript",
+  "bugs": {
+    "url": "https://github.com/lucasfloriani/curriculum-vitae/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasfloriani/curriculum-vitae.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "ES6",
+    "curriculum",
+    "webpack",
+    "lint"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "start": "webpack-dev-server --entry ./src/js/home.js --output-filename ./dist/[name].bundle.js",
+    "start:dev": "webpack-dev-server",
+    "json-to-sass": "json-to-sass ./src/js/animation/variables.json ./src/scss/abstracts/_variables.scss"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-minify-webpack-plugin": "^0.3.0",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.10",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "exports-loader": "^0.7.0",
+    "imports-loader": "^0.8.0",
+    "mini-css-extract-plugin": "^0.2.0",
+    "node-sass": "^4.7.2",
+    "postcss-cli": "^5.0.0",
+    "postcss-loader": "^2.1.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {}
+}
