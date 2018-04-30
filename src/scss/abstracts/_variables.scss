@@ -1,23 +1,53 @@
-$em-1: 1.8em;
-$em-2: 1.6em;
-$em-3: 1.4em;
-$em-4: 1.2em;
-$em-5: 1.0em;
-$em-6: 0.8em;
-$em-7: 0.6em;
+$sizes: (
+  'em-1': 1.8em,
+  'em-2': 1.6em,
+  'em-3': 1.4em,
+  'em-4': 1.2em,
+  'em-5': 1.0em,
+  'em-6': 0.8em,
+  'em-7': 0.6em,
+);
+@function getSize($name) {
+  @return map-get($sizes, $name);
+}
 
-$color-1: #6d5b97;
-$color-2: #844981;
-$color-3: #a9729c;
-$color-4: #868fc6;
-$color-5: #a28aaa;
-$color-6: #a96483;
-$color-7: #d57897;
-$color-8: #f0a5c6;
-$color-9: #1b1b1d;
+$colors: (
+  'color-1': #6d5b97,
+  'color-2': #844981,
+  'color-3': #a9729c,
+  'color-4': #868fc6,
+  'color-5': #a28aaa,
+  'color-6': #a96483,
+  'color-7': #d57897,
+  'color-8': #f0a5c6,
+  'color-9': #1b1b1d,
+);
+@function getColor($name) {
+  @return map-get($colors, $name);
+}
 
-$smokeColor: 'eb9ffc';
+$fonts: (
+  'fontType1': Nothing You Could Do, cursive,
+  'fontType2': Montserrat, sans-serif,
+  'fontType3': Amatic SC, cursive,
+);
+@function getFont($name) {
+  @return map-get($fonts, $name);
+}
 
-$fontType1: "Nothing You Could Do", cursive;
-$fontType2: "Montserrat", sans-serif;
-$fontType3: "Amatic SC", cursive;
+$breakpoints: (
+  'max-extra-small': (max-width: 479px),
+  'max-small': (max-width: 576px),
+  'max-medium': (max-width: 767px),
+  'max-large': (max-width: 991px),
+  'max-extra-large': (max-width: 1199px),
+
+  'min-extra-small': (min-width: 480px),
+  'min-small': (min-width: 577px),
+  'min-medium': (min-width: 768px),
+  'min-large': (min-width: 992px),
+  'min-extra-large': (min-width: 1200px),
+);
+@function getBreakpoint($name) {
+  @return map-get($breakpoints, $name);
+}

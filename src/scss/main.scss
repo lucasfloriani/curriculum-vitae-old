@@ -1,3 +1,9 @@
+@charset 'utf-8';
+
+@import './abstracts/variables';
+
+@import './base/animations';
 @import './base/reset';
 @import './base/typography';
+
 @import './pages/home';
