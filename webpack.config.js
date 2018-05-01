@@ -1,8 +1,11 @@
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
+  cache: false,
   mode: 'development',
   entry: {
     home: './src/js/home.js'
@@ -11,37 +14,48 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.join(__dirname, 'dist')
   },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true // set to true if you want JS source maps
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css'
+      filename: 'dist/[name].css'
     })
   ],
   module: {
     rules: [
       {
-        enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader'
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: [
-            ['env', {
-              targets: {
-                browsers: ['last 4 versions', 'safari >= 7', 'ie >= 11']
-              }
-            }
-            ]
-          ]
-        }
-      },
-      {
-        test: /\.(scss|css)$/,
         use: [
+          {
+            loader: 'babel-loader',
+            query: {
+              presets: [
+                ['env', {
+                  targets: {
+                    browsers: ['last 4 versions', 'safari >= 7', 'ie >= 11']
+                  }
+                }
+                ]
+              ]
+            }
+          },
+          'eslint-loader'
+        ]
+      },
+      {
+        test: /\.(s?[ac]ss|css)$/,
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',

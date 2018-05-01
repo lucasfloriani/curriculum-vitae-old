@@ -1,25 +1,40 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700|Montserrat:400,600|Nothing+You+Could+Do');
-@import './../abstracts/variables';
+h1,
+h2 {
+  font-family: get-font('fontType1');
+}
 
-h1, h2 {font-family: $fontType1}
-h3, h4 {font-family: $fontType3; font-weight: bold}
-h5, h6, p, span {font-family: $fontType2}
-h5, h6 {font-weight: 600}
+h3,
+h4 {
+  font-family: get-font('fontType3');
+  font-weight: bold;
+}
 
-.is-size-1 {font-size: $em-1}
-.is-size-2 {font-size: $em-2}
-.is-size-3 {font-size: $em-3}
-.is-size-4 {font-size: $em-4}
-.is-size-5 {font-size: $em-5}
-.is-size-6 {font-size: $em-6}
-.is-size-7 {font-size: $em-7}
+h5,
+h6,
+p,
+span {
+  font-family: get-font('fontType2');
+}
 
-.is-color-1 {color: $color-1}
-.is-color-2 {color: $color-2}
-.is-color-3 {color: $color-3}
-.is-color-4 {color: $color-4}
-.is-color-5 {color: $color-5}
-.is-color-6 {color: $color-6}
-.is-color-7 {color: $color-7}
-.is-color-8 {color: $color-8}
-.is-color-9 {color: $color-9}
+h5,
+h6 {
+  font-weight: 600;
+}
+
+.is-size-1 {font-size: get-size('em-1')}
+.is-size-2 {font-size: get-size('em-2')}
+.is-size-3 {font-size: get-size('em-3')}
+.is-size-4 {font-size: get-size('em-4')}
+.is-size-5 {font-size: get-size('em-5')}
+.is-size-6 {font-size: get-size('em-6')}
+.is-size-7 {font-size: get-size('em-7')}
+
+.is-color-1 {color: get-color('color-1')}
+.is-color-2 {color: get-color('color-2')}
+.is-color-3 {color: get-color('color-3')}
+.is-color-4 {color: get-color('color-4')}
+.is-color-5 {color: get-color('color-5')}
+.is-color-6 {color: get-color('color-6')}
+.is-color-7 {color: get-color('color-7')}
+.is-color-8 {color: get-color('color-8')}
+.is-color-9 {color: get-color('color-9')}

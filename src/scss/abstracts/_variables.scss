@@ -3,11 +3,11 @@ $sizes: (
   'em-2': 1.6em,
   'em-3': 1.4em,
   'em-4': 1.2em,
-  'em-5': 1.0em,
-  'em-6': 0.8em,
-  'em-7': 0.6em,
+  'em-5': 1em,
+  'em-6': .8em,
+  'em-7': .6em,
 );
-@function getSize($name) {
+@function get-size($name) {
   @return map-get($sizes, $name);
 }
 
@@ -22,16 +22,16 @@ $colors: (
   'color-8': #f0a5c6,
   'color-9': #1b1b1d,
 );
-@function getColor($name) {
+@function get-color($name) {
   @return map-get($colors, $name);
 }
 
 $fonts: (
-  'fontType1': Nothing You Could Do, cursive,
-  'fontType2': Montserrat, sans-serif,
-  'fontType3': Amatic SC, cursive,
+  'fontType1': 'Nothing You Could Do, cursive',
+  'fontType2': 'Montserrat, sans-serif',
+  'fontType3': 'Amatic SC, cursive',
 );
-@function getFont($name) {
+@function get-font($name) {
   @return map-get($fonts, $name);
 }
 
@@ -48,6 +48,6 @@ $breakpoints: (
   'min-large': (min-width: 992px),
   'min-extra-large': (min-width: 1200px),
 );
-@function getBreakpoint($name) {
+@function get-breakpoint($name) {
   @return map-get($breakpoints, $name);
 }
