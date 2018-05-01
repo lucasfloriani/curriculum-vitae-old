@@ -11,7 +11,7 @@ module.exports = {
     home: './src/js/home.js'
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: 'js/[name].bundle.js',
     path: path.join(__dirname, 'dist')
   },
   optimization: {
@@ -19,14 +19,14 @@ module.exports = {
       new UglifyJsPlugin({
         cache: true,
         parallel: true,
-        sourceMap: true // set to true if you want JS source maps
+        sourceMap: true
       }),
       new OptimizeCSSAssetsPlugin({})
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'dist/[name].css'
+      filename: 'css/[name].css'
     })
   ],
   module: {
@@ -55,7 +55,6 @@ module.exports = {
         test: /\.(s?[ac]ss|css)$/,
         exclude: /node_modules/,
         use: [
-          'style-loader',
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
@@ -76,8 +75,7 @@ module.exports = {
               ]
             }
           },
-          'sass-loader',
-          'sass-lint'
+          'sass-loader'
         ]
       }
     ]

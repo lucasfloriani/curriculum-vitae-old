@@ -1,0 +1,7 @@
+{
+  "extends": "airbnb-base/legacy",
+  "parser": "babel-eslint",
+  "rules": {
+    "linebreak-style": 0
+  }
+}
