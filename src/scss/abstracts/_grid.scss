@@ -1,0 +1,10 @@
+.is-column-until-large {
+  @include respond-to('min-medium') {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.is-row-reverse {
+  flex-flow: row-reverse;
+}

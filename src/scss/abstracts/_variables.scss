@@ -1,4 +1,5 @@
 $sizes: (
+  'em-0': 2.2em,
   'em-1': 1.8em,
   'em-2': 1.6em,
   'em-3': 1.4em,
@@ -21,15 +22,17 @@ $colors: (
   'color-7': #d57897,
   'color-8': #f0a5c6,
   'color-9': #1b1b1d,
+  'color-10': #fff,
+  'color-11': rgba(27, 27, 29, .3),
 );
 @function get-color($name) {
   @return map-get($colors, $name);
 }
 
 $fonts: (
-  'fontType1': 'Nothing You Could Do, cursive',
-  'fontType2': 'Montserrat, sans-serif',
-  'fontType3': 'Amatic SC, cursive',
+  'fontType1': 'Nothing You Could Do',
+  'fontType2': 'Montserrat',
+  'fontType3': 'Amatic SC',
 );
 @function get-font($name) {
   @return map-get($fonts, $name);

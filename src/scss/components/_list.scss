@@ -1,0 +1,29 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    align-items: center;
+    display: flex;
+    margin-bottom: 30px;
+    width: calc(50% - 30px);
+
+    &__image {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    &__title {
+      font-size: get-size('em-4');
+      margin: 0;
+    }
+
+    &__text {
+      font-size: get-size('em-6');
+      margin: 8px 0 0;
+    }
+  }
+}

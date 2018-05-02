@@ -1,0 +1,75 @@
+%multi-layer-effect {
+  box-shadow: 2px 3px lighten(get-color('color-9'), 40%), 4px 6px lighten(get-color('color-9'), 50%), 6px 9px lighten(get-color('color-9'), 60%);
+  transform: translate(0, 0);
+}
+
+.multi-layer {
+  transform: translate(6px, 9px);
+  transition: .2s transform ease-in-out, .2s box-shadow ease-in-out;
+
+  &:hover {
+    @extend %multi-layer-effect;
+
+    .multi-layer {
+      @extend %multi-layer-effect;
+    }
+  }
+}
+
+.underline {
+  overflow: hidden;
+
+  &::after {
+    background-image: linear-gradient(to right, get-color('color-10') 0%, get-color('color-10') 50%, lighten(get-color('color-9'), 10%) 50%, lighten(get-color('color-9'), 10%) 100%);
+    content: '';
+    display: block;
+    height: 3px;
+    transform: translateX(-50%);
+    transition: transform .3s ease-in-out;
+    width: 200%;
+  }
+
+  &:hover {
+    &::after {
+      transform: translateX(0);
+    }
+  }
+}
+
+.zoom {
+  transition: .3s transform ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.flip-top {
+  opacity: 0;
+  transform: rotateX(90deg);
+  transform-origin: top;
+  transition: .3s transform ease-in-out, .3s opacity ease-in-out;
+
+  &.active {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+.opacity {
+  opacity: 0;
+  transition: .3s opacity ease-in-out;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.height {
+  max-height: 0;
+  transition: .3s max-height ease-in-out;
+
+  &.active {
+    max-height: 100px;
+  }
+}

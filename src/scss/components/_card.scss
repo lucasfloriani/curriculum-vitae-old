@@ -1,0 +1,18 @@
+.card {
+  background-color: get-color('color-10');
+  box-shadow: -25px 15px 50px 0 lighten(get-color('color-11'), 35%);
+  box-sizing: border-box;
+  padding: 30px 25px;
+
+  &__header {
+    background: linear-gradient(120deg, get-color('color-9'), lighten(get-color('color-9'), 15%) 75%, get-color('color-4') 75%, lighten(get-color('color-4'), 5%));
+    padding: 20px 20px 40px;
+  }
+}
+
+.card-main {
+  margin: 5vh 0;
+  min-height: 80vh;
+  position: relative;
+  width: 80vw;
+}

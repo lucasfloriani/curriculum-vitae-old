@@ -1,0 +1,44 @@
+.selection {
+  display: flex;
+  justify-content: space-between;
+
+  &__content {
+    width: calc(100% - 320px);
+
+    &__title {
+      color: get-color('color-10');
+      display: block;
+      font-size: get-size('em-5');
+      margin: 0 0 5px;
+      padding: 8px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+
+    &__item {
+      color: get-color('color-10');
+      display: block;
+      font-size: get-size('em-5');
+      max-height: 0;
+      opacity: 0;
+      padding: 0 8px;
+      transition: .3s padding ease-in-out, .3s opacity ease-in-out, .3s max-height ease-in-out, .3s transform ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &.active {
+        margin-bottom: 5px;
+        max-height: 50px;
+        opacity: 1;
+        padding: 8px;
+      }
+    }
+  }
+}
