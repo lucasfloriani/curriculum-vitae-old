@@ -24,7 +24,6 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack",
-    "start": "webpack-dev-server --entry ./src/js/home.js --output-filename ./dist/[name].bundle.js",
     "start:dev": "webpack-dev-server"
   },
   "devDependencies": {
