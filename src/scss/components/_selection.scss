@@ -8,6 +8,8 @@
 
   &__content {
     @include respond-to('max-medium') {
+      display: flex;
+      flex-direction: column;
       width: 100%;
     }
 
