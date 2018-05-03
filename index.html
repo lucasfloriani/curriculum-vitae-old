@@ -28,17 +28,17 @@
         <input type="checkbox" name="Frontend" id="frontend" class="collapsible__checkbox">
         <label for="frontend"><h3 class="selection__title collapsible__title">Frontend</h3></label>
         <div class="collapsible__content selection">
-          <div class="selection__content">
+          <div class="selection__content active">
             <h5 class="selection__content__title flip-top active">HTML5</h5>
             <p class="selection__content__text opacity active">
               Conhecimento de 95% da linguagem de marcação, conhecendo tanto o básico como o avançado como SEO e acessibilidade.
             </p>
           </div>
           <ul class="selection__list">
-            <li><a href="" class="selection__list__item" data-language="html5">HTML5</a></li>
-            <li><a href="" class="selection__list__item active" data-language="css3">CSS3</a></li>
-            <li><a href="" class="selection__list__item active" data-language="sass">Sass</a></li>
-            <li><a href="" class="selection__list__item active" data-language="javascript">Javascript</a></li>
+            <li><a href="" class="selection__list__item" data-language="html5" data-type="frontend">HTML5</a></li>
+            <li><a href="" class="selection__list__item active" data-language="css3" data-type="frontend">CSS3</a></li>
+            <li><a href="" class="selection__list__item active" data-language="sass" data-type="frontend">Sass</a></li>
+            <li><a href="" class="selection__list__item active" data-language="javascript" data-type="frontend">Javascript</a></li>
           </ul>
         </div>
       </section>
@@ -47,25 +47,25 @@
         <input type="checkbox" name="backend" id="backend" class="collapsible__checkbox">
         <label for="backend"><h3 class="selection__title collapsible__title">Backend</h3></label>
         <div class="collapsible__content selection is-row-reverse">
-          <div class="selection__content">
+          <div class="selection__content active">
             <h5 class="selection__content__title flip-top active">PHP</h5>
             <p class="selection__content__text opacity active">
               Linguagem trabalhada durante 2 anos para criação de sites institucionais e e-commerces (Wordpress/Magento), conhecimento solido das funcionalidades e configurações da mesma.
             </p>
           </div>
           <ul class="selection__list">
-            <li><a href="" class="selection__list__item" data-language="php">PHP</a></li>
-            <li><a href="" class="selection__list__item active" data-language="go">Go</a></li>
-            <li><a href="" class="selection__list__item active" data-language="wordpress">Wordpress</a></li>
-            <li><a href="" class="selection__list__item active" data-language="magento">Magento</a></li>
+            <li><a href="" class="selection__list__item" data-language="php" data-type="backend">PHP</a></li>
+            <li><a href="" class="selection__list__item active" data-language="go" data-type="backend">Go</a></li>
+            <li><a href="" class="selection__list__item active" data-language="wordpress" data-type="backend">Wordpress</a></li>
+            <li><a href="" class="selection__list__item active" data-language="magento" data-type="backend">Magento</a></li>
           </ul>
         </div>
       </section>
 
-      <section class="collapsible active experiencia-profissional multi-layer">
+      <section class="collapsible collapsible--overflow active experiencia-profissional multi-layer">
         <input type="checkbox" name="experiencia-profissional" id="experiencia-profissional" class="collapsible__checkbox">
         <label for="experiencia-profissional"><h3 class="collapsible__title">Experiência profissional</h3></label>
-        <ul class="list collapsible_content">
+        <ul class="list collapsible__content">
           <li class="list__item">
             <figure>
               <img src="/src/img/empresas/zipperer.png" alt="Logo Zipperer Contabilidade" class="list__item__image">
@@ -102,10 +102,10 @@
         </ul>
       </section>
 
-      <section class="collapsible active formacao multi-layer">
+      <section class="collapsible collapsible--overflow active formacao multi-layer">
         <input type="checkbox" name="formacao" id="formacao" class="collapsible__checkbox">
         <label for="formacao"><h3 class="collapsible__title">Formação</h3></label>
-        <ul class="list collapsible_content">
+        <ul class="list collapsible__content">
           <li class="list__item">
             <figure>
               <img src="/src/img/estudos/udesc.png" alt="Logo UDESC" class="list__item__image">
@@ -120,10 +120,10 @@
         </ul>
       </section>
 
-      <section class="collapsible active cursos multi-layer">
+      <section class="collapsible collapsible--overflow active cursos multi-layer">
         <input type="checkbox" name="cursos" id="cursos" class="collapsible__checkbox">
         <label for="cursos"><h3 class="collapsible__title">Cursos</h3></label>
-        <ul class="list collapsible_content">
+        <ul class="list collapsible__content">
           <li class="list__item">
             <figure>
               <img src="/src/img/cursos/python.png" alt="Logo Python" class="list__item__image">
@@ -204,10 +204,10 @@
         </ul>
       </section>
 
-      <section class="collapsible active palestras multi-layer">
+      <section class="collapsible collapsible--overflow active palestras multi-layer">
         <input type="checkbox" name="palestras" id="palestras" class="collapsible__checkbox">
         <label for="palestras"><h3 class="collapsible__title">Palestras</h3></label>
-        <ul class="list collapsible_content">
+        <ul class="list collapsible__content">
           <li class="list__item">
             <figure>
               <img src="/src/img/palestras/latinoware.png" alt="Logo Latinoware" class="list__item__image">
@@ -255,10 +255,10 @@
         </ul>
       </section>
 
-      <section class="collapsible active informacoes-adicionais multi-layer">
+      <section class="collapsible collapsible--overflow active informacoes-adicionais multi-layer">
         <input type="checkbox" name="informacoes-adicionais" id="informacoes-adicionais" class="collapsible__checkbox">
         <label for="informacoes-adicionais"><h3 class="collapsible__title">Informações Adicionais</h3></label>
-        <ul class="list collapsible_content">
+        <ul class="list collapsible__content">
           <li class="list__item">
             <figure>
               <img src="/src/img/info-adicional/obmep.png" alt="Logo OBMEP" class="list__item__image">
@@ -279,7 +279,7 @@
         <section class="contato collapsible active multi-layer">
           <input type="checkbox" name="contato" id="contato" class="collapsible__checkbox">
           <label for="contato"><h3 class="collapsible__title">Contato</h3></label>
-          <ul class="collapsible_content contact-list">
+          <ul class="collapsible__content contact-list">
             <li>
               <a href="https://github.com/lucasfloriani" target="_blank" class="contact-list__link">
                 <img src="/src/img/github.png" alt="Icone Github">

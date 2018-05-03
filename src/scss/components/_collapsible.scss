@@ -3,21 +3,76 @@
   padding: 10px 15px;
 
   &__title {
+    @include respond-to('max-large') {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
     color: get-color('color-10');
     font-size: get-size('em-0');
     margin: 0 0 10px;
     padding: 8px;
+
+    &::after {
+      @include respond-to('max-large') {
+        color: get-color('color-10');
+        content: '\d7';
+        font-size: 65px;
+        line-height: .7;
+        transform: rotate(45deg);
+        transition: .3s transform ease-in-out;
+      }
+    }
   }
 
-  &__checkbox,
   &__content {
+    @include respond-to('max-large') {
+      max-height: 0;
+      opacity: 0;
+      transform: rotateX(90deg);
+      transform-origin: top;
+      transition: .3s transform ease-in-out, .3s opacity ease-in-out, .3s max-height ease-in-out, .3s margin ease-in-out;
+    }
+  }
+
+  &__checkbox {
     display: none;
   }
 
-  &.active {
-    .collapsible {
-      &__content {
-        display: flex;
+  &__checkbox {
+    &:checked {
+      + label {
+        .collapsible__title {
+          &::after {
+            @include respond-to('max-large') {
+              transform: rotate(0);
+            }
+          }
+        }
+      }
+
+      ~ .collapsible__content {
+        @include respond-to('max-large') {
+          max-height: 300px;
+          opacity: 1;
+          transform: rotateX(0);
+        }
+      }
+    }
+
+    &:not(:checked) {
+      ~ .collapsible__content {
+        @include respond-to('max-large') {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &.collapsible--overflow {
+    .collapsible__content {
+      @include respond-to('max-large') {
+        overflow-y: auto;
       }
     }
   }

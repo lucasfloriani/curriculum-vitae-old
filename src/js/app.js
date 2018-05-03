@@ -2,9 +2,9 @@ import { UICtrl } from './ui';
 import { languages } from './storage';
 
 export const App = ((UIController, LanguageInfo) => {
-  const removeSelectorActive = () => {
+  const removeSelectorActive = (languageType) => {
     const UISelectors = UIController.getSelectors();
-    const selectionItems = document.querySelectorAll(UISelectors.selectionItems);
+    const selectionItems = document.querySelectorAll(`${UISelectors.selectionItems}[data-type="${languageType}"]`);
     selectionItems.forEach((item) => {
       item.classList.add('active');
     });
@@ -13,6 +13,7 @@ export const App = ((UIController, LanguageInfo) => {
   const showSelectorInfo = (e) => {
     e.preventDefault();
     const language = e.target.getAttribute('data-language');
+    const languageType = e.target.getAttribute('data-type');
     const selectionContent = e.target.parentNode.parentNode.parentNode.children[0];
     const selectionTitle = selectionContent.children[0];
     const selectionText = selectionContent.children[1];
@@ -20,7 +21,7 @@ export const App = ((UIController, LanguageInfo) => {
     selectionContent.classList.remove('active');
     selectionTitle.classList.remove('active');
     selectionText.classList.remove('active');
-    removeSelectorActive();
+    removeSelectorActive(languageType);
     setTimeout(() => {
       e.target.classList.remove('active');
 
@@ -35,16 +36,14 @@ export const App = ((UIController, LanguageInfo) => {
 
   const loadEventListeners = () => {
     const UISelectors = UIController.getSelectors();
-    const selectionItems = document.querySelectorAll(UISelectors.selectionItems);
 
-    selectionItems.forEach((item) => {
+    document.querySelectorAll(UISelectors.selectionItems).forEach((item) => {
       item.addEventListener('click', showSelectorInfo);
     });
   };
 
   return {
     init: () => {
-      // Load event listeners
       loadEventListeners();
     }
   };

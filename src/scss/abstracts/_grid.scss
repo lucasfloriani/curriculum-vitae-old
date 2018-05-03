@@ -1,8 +1,14 @@
 .is-column-until-large {
-  @include respond-to('min-medium') {
+  @include respond-to('min-large') {
     align-items: center;
-    display: flex;
   }
+
+  @include respond-to('max-extra-medium') {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  display: flex;
 }
 
 .is-row-reverse {

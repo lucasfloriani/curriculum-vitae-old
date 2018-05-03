@@ -1,5 +1,13 @@
 .thumbnail {
   &__image {
+    @include respond-to('max-extra-medium') {
+      margin: auto;
+    }
+
+    @include respond-to('max-extra-small') {
+      max-width: 100%;
+    }
+
     border-radius: 2px;
   }
 
