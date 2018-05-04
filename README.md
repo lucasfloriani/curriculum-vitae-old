@@ -1,6 +1,6 @@
 # Curriculum Vitae
 
-Este repositório foi desenvolvido com o intuito de criar uma página HTML animada para demonstrar meus conhecimentos na área de programação e infra, utilizando algumas tecnologias que eu conheço e acabo utilizando no dia a dia, caso tenho sugestões ou erros sintam-se livres para me avisar, ficarei muito grato.
+Este repositório foi desenvolvido com o intuito de criar uma página HTML animada para demonstrar meus conhecimentos na área de programação e infra, utilizando algumas tecnologias que eu conheço e acabo utilizando no dia a dia, caso tenho sugestões ou achou algum erro sintam-se livres para me avisar, ficarei muito grato.
 
 ## Como iniciar o projeto
 
