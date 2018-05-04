@@ -53,12 +53,19 @@
 
       ~ .collapsible__content {
         @include respond-to('max-large') {
-          max-height: 300px;
+          max-height: 550px;
           opacity: 1;
           transform: rotateX(0);
         }
+
+        &:not(.selection) {
+          @include respond-to('max-large') {
+            max-height: 300px;
+          }
+        }
       }
     }
+
 
     &:not(:checked) {
       ~ .collapsible__content {
