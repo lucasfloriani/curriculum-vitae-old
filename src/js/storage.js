@@ -9,7 +9,7 @@ export const languages = {
   },
   sass: {
     title: 'Sass',
-    description: 'Conhecimento de 60% do pré processador, codificação seguindo padrões de styleguide presentes em https://sass-guidelin.es .'
+    description: 'Conhecimento de 90% do pré processador, codificação seguindo padrões de styleguide presentes em https://sass-guidelin.es .'
   },
   javascript: {
     title: 'Javascript',
