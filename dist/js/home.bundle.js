@@ -36,17 +36,32 @@
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
 /******/ 	};
 /******/
 /******/ 	// define __esModule on exports
 /******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
 /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -103,7 +118,7 @@ eval("\n\n__webpack_require__(/*! ./../scss/main.scss */ \"./src/scss/main.scss\
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar languages = exports.languages = {\n  html5: {\n    title: 'HTML5',\n    description: 'Conhecimento de 95% da linguagem de marcação, conhecendo tanto o básico como o avançado como SEO, Acessibilidade e LocalStorage/SessionStorage. Conhecimento básico sobre as APIs de canvas, video e audio, sendo os restantes para o entendimento completo da linguagem.'\n  },\n  css3: {\n    title: 'CSS3',\n    description: 'Conhecimento de 90% da linguagem, utilização das novas funcionalidades do CSS3 bem sólidas como Animações, Flexbox, etc, faltando somente propriedades mais especificas e pouco utilizadas.'\n  },\n  sass: {\n    title: 'Sass',\n    description: 'Conhecimento de 60% do pré processador, codificação seguindo padrões de styleguide presentes em https://sass-guidelin.es .'\n  },\n  javascript: {\n    title: 'Javascript',\n    description: 'Conhecimentos sólidos da linguagem até o ES6 com algumas funcionalidades do ES7/ES8. Utilização de padrões de projeto e organização de código utilizando o Webpack e afins.'\n  },\n  framework_css: {\n    title: 'Frameworks CSS',\n    description: 'Conhecimento sobre os frameworks CSS mais famosos do mercado como Bootstrap, Materialize e Bulma'\n  },\n  spa: {\n    title: 'Single Page Application',\n    description: 'Conhecimento básico sobre os demais SPAs do mercado atual como Angular, Vue e React. Entendimento da funcionalidade de suas bibliotecas externas e qual problemas elas resolvem (Vuex/Redux, Next/Nuxt, etc). Dentre eles o mais conhecido sendo o Angular por iniciar a codificação da estrutura de uma rede social.'\n  },\n  php: {\n    title: 'PHP',\n    description: 'Linguagem trabalhada durante 2 anos para criação de sites institucionais e e-commerces (Wordpress/Magento), conhecimento solido das funcionalidades e configurações da mesma.'\n  },\n  go: {\n    title: 'Go',\n    description: 'Linguagem em estudo e utilizada no atual trabalho, conhecimento atual solido para criação de sistemas SaaS.'\n  },\n  wordpress: {\n    title: 'Wordpress',\n    description: 'Trabalhado durante 1 ano com este framework, conhecendo assim suas peculiariedades e sistema de codificação.'\n  },\n  magento: {\n    title: 'Magento',\n    description: 'Framework completo para criação de sistemas de e-commerce complexos, conhecimentos para alterações de temas e criação de pequenos módulos para integrar ao sistema.'\n  },\n  git: {\n    title: 'Git',\n    description: 'Conhecimento básico sobre as funcionalidades mais utilizadas durante o dia a dia.'\n  },\n  rest: {\n    title: 'REST',\n    description: 'Conhecimento sólido sobre utilização e criação de APIs REST.'\n  }\n};\n\n//# sourceURL=webpack:///./src/js/storage.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar languages = exports.languages = {\n  html5: {\n    title: 'HTML5',\n    description: 'Conhecimento de 95% da linguagem de marcação, conhecendo tanto o básico como o avançado como SEO, Acessibilidade e LocalStorage/SessionStorage. Conhecimento básico sobre as APIs de canvas, video e audio, sendo os restantes para o entendimento completo da linguagem.'\n  },\n  css3: {\n    title: 'CSS3',\n    description: 'Conhecimento de 90% da linguagem, utilização das novas funcionalidades do CSS3 bem sólidas como Animações, Flexbox, etc, faltando somente propriedades mais especificas e pouco utilizadas.'\n  },\n  sass: {\n    title: 'Sass',\n    description: 'Conhecimento de 90% do pré processador, codificação seguindo padrões de styleguide presentes em https://sass-guidelin.es .'\n  },\n  javascript: {\n    title: 'Javascript',\n    description: 'Conhecimentos sólidos da linguagem até o ES6 com algumas funcionalidades do ES7/ES8. Utilização de padrões de projeto e organização de código utilizando o Webpack e afins.'\n  },\n  framework_css: {\n    title: 'Frameworks CSS',\n    description: 'Conhecimento sobre os frameworks CSS mais famosos do mercado como Bootstrap, Materialize e Bulma'\n  },\n  spa: {\n    title: 'Single Page Application',\n    description: 'Conhecimento básico sobre os demais SPAs do mercado atual como Angular, Vue e React. Entendimento da funcionalidade de suas bibliotecas externas e qual problemas elas resolvem (Vuex/Redux, Next/Nuxt, etc). Dentre eles o mais conhecido sendo o Angular por iniciar a codificação da estrutura de uma rede social.'\n  },\n  php: {\n    title: 'PHP',\n    description: 'Linguagem trabalhada durante 2 anos para criação de sites institucionais e e-commerces (Wordpress/Magento), conhecimento solido das funcionalidades e configurações da mesma.'\n  },\n  go: {\n    title: 'Go',\n    description: 'Linguagem em estudo e utilizada no atual trabalho, conhecimento atual solido para criação de sistemas SaaS.'\n  },\n  wordpress: {\n    title: 'Wordpress',\n    description: 'Trabalhado durante 1 ano com este framework, conhecendo assim suas peculiariedades e sistema de codificação.'\n  },\n  magento: {\n    title: 'Magento',\n    description: 'Framework completo para criação de sistemas de e-commerce complexos, conhecimentos para alterações de temas e criação de pequenos módulos para integrar ao sistema.'\n  },\n  git: {\n    title: 'Git',\n    description: 'Conhecimento básico sobre as funcionalidades mais utilizadas durante o dia a dia.'\n  },\n  rest: {\n    title: 'REST',\n    description: 'Conhecimento sólido sobre utilização e criação de APIs REST.'\n  }\n};\n\n//# sourceURL=webpack:///./src/js/storage.js?");
 
 /***/ }),
 
